@@ -50,9 +50,18 @@ script = ExtResource("1_cnsdx")
 sprite_frames = SubResource("SpriteFrames_a2ovr")
 autoplay = "default"
 frame_progress = 0.129154
+flip_h = true
 
 [node name="dyingfrfr" parent="." instance=ExtResource("2_cnsdx")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dyingfrfr"]
-position = Vector2(0, 5.25)
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_jymks")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, 5)
+target_position = Vector2(10, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, 5)
+target_position = Vector2(-10, 0)
